@@ -1,0 +1,8 @@
+irc:
+  build: .
+  ports:
+    - "6697:6697"
+  volumes:
+    - ~/.znc:/znc-data
+  command:
+    - /entrypoint.sh
