@@ -1,6 +1,6 @@
 # version 1.6.1-1
 # docker-version 1.8.2
-FROM ubuntu:15.04
+FROM ubuntu:15.10
 
 ENV ZNC_VERSION 1.6.1
 
@@ -23,13 +23,3 @@ RUN apt-get update \
 RUN useradd znc
 ADD docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-# ADD znc.conf.default /znc.conf.default
-# RUN chmod 644 /znc.conf.default
-
-# VOLUME /znc-data
-
-# EXPOSE 6667
-# ENTRYPOINT ["/entrypoint.sh"]
-# CMD [""]
-
-
